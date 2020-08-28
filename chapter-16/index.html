@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-600 text-xl">
+    <div class="container mx-auto text-center min-h-full flex flex-col items-center justify-center bg-gray-200 max-w-md rounded-md">
+    <div class="bg-gray-300 rounded-lg w-3/4 p-10 mb-6">
+        <h2 class="font-bold text-gray-600">Recipes</h2>
+        <ul class="text-base">
+        </ul>
+    </div> 
+
+
+    <form>
+        <div class="input-group">
+            <input class="outline-none focus:border-green-200 rounded-full border-red-200 border-4 px-4" id="recipe" required/>
+            <input class="px-6 rounded-full bg-green-400 outline-none " type="submit" value="add" id="add" />
+        </div>
+    </form>
+
+    <button class="w-full px-4 py-2 bg-red-400 rounded-full text-gray-300">Unsubcribe from collecion changes</button>
+
+    </div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDFhodtCNPIfaVVUVcLX-wfqjOzfeM6MaA",
+        authDomain: "mordern-js.firebaseapp.com",
+        databaseURL: "https://mordern-js.firebaseio.com",
+        projectId: "mordern-js",
+        storageBucket: "mordern-js.appspot.com",
+        messagingSenderId: "97031391975",
+        appId: "1:97031391975:web:38b8e9d0ee979781d9b042",
+        measurementId: "G-MRTKZ424CV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+
+    <script src="sandbox.js"></script>
+
+</body>
+</html>

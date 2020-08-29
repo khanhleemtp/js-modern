@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LD Chat</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-500">
+
+    <!--  container & title -->
+    <div class="container mx-auto my-4 text-center bg-gray-300 max-w-md rounded-md px-4">
+        <h1 class="my-4 text-center text-3xl font-bold italic text-purple-400">LD Chat</h1>
+   
+
+    <!--  button for chatrooms -->
+    <div class="chat-rooms mb-3">
+        <div class="my-2 text-xl">Choose a chatroom</div>
+        <button class="rounded-lg font-semibold text-gray-100 px-4 py-2 bg-green-400" id="general">#general</button>
+        <button class="rounded-lg font-semibold text-gray-100 px-4 py-2 bg-green-400" id="gaming">#gaming</button>
+        <button class="rounded-lg font-semibold text-gray-100 px-4 py-2 bg-green-400" id="music">#music</button>
+        <button class="rounded-lg font-semibold text-gray-100 px-4 py-2 bg-green-400" id="ld">#ld</button>
+
+    </div>
+
+    <!-- chat list/ window -->
+    <div class="chat-window overscroll-none">
+        <ul class="chat-list h-64  overflow-y-auto overscroll-y-contain">
+
+        </ul>
+    </div>
+
+    <!-- new chat form -->
+    <form class="new-chat my-3 flex justify-around items-center">
+        <div class="input-text ">Your message: </div>
+        <input type="text" class="outline-none focus:border-green-200 rounded-full border-red-200 border-4 px-4"
+         id="message" required />
+        <input type="submit" class="px-4 py-2 text-gray-200 rounded-full bg-green-400 outline-none cursor-pointer" 
+        value="send" />
+    </form>
+
+    <!-- update name form -->
+    <form class="new-name my-3 flex justify-around items-center py-4">
+        <div class="input-text"
+        >Update name: </div>
+        <input type="text" class="outline-none focus:border-green-200 rounded-full border-red-200 border-4 px-4" 
+        id="name" required />
+        <input type="submit" class="px-4 py-2 text-gray-200 rounded-full bg-green-400 outline-none cursor-pointer" 
+        value="update" />
+    </form>
+    <div class="update-msg w-full"></div>
+
+    </div>
+
+<script src="http://cdn.date-fns.org/v1.0.0/date_fns.min.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBfSAdWcom8d-L6AcnvSLH3ctnfDBGLFBA",
+    authDomain: "ld-chat.firebaseapp.com",
+    databaseURL: "https://ld-chat.firebaseio.com",
+    projectId: "ld-chat",
+    storageBucket: "ld-chat.appspot.com",
+    messagingSenderId: "44694797780",
+    appId: "1:44694797780:web:26c70f6108fe9d7261ea41"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="scripts/chat.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

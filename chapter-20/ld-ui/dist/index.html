@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<style>
+  body{ font-size: 1.5em; }
+  .container { margin: 40px; margin-top: 60px }
+  button{
+    width: 200px;
+    background: #eee;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    display: block;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <div class="container">
+    <!-- Tooltip -->
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum optio adipisci corporis officiis reprehenderit quaerat? Non, praesentium debitis doloremque mollitia placeat ratione, cupiditate ipsam eveniet optio libero rerum, vero obcaecati?
+  <span class="tooltip" data-messege="I'am a tooltip!!">LD Music</span>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid molestiae corporis blanditiis repudiandae tempora quis alias distinctio, eaque eveniet magnam consectetur quo illum perferendis id esse enim iusto quisquam? Ut.
+</p>
+
+  <h2>Services</h2>
+    <!-- Dropdowns  -->
+  <div class="dropdown">
+    <div class="trigger">Awesome T-shirt Designs</div>
+    <div class="content">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eaque quasi earum, autem aspernatur ipsum ad quaerat molestiae fuga. Incidunt fuga dicta repellat enim nisi odio perspiciatis possimus error dolorum.
+      </p>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <div class="trigger">Awesome T-shirt Designs</div>
+    <div class="content">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eaque quasi earum, autem aspernatur ipsum ad quaerat molestiae fuga. Incidunt fuga dicta repellat enim nisi odio perspiciatis possimus error dolorum.
+      </p>
+    </div>
+  </div>
+
+  <h2>More Infomation</h2>
+  <div class="tabs">
+    <ul>
+        <li class="trigger active" data-target="#about">About</li>
+        <li class="trigger" data-target="#delivery">Delivery</li>
+        <li class="trigger" data-target="#return">Return</li>
+    </ul>
+    <div id="about" class="content active">
+      <h3>about</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, suscipit! Cumque velit quia sapiente quas ullam culpa aperiam quod at eveniet, soluta aliquam ipsum omnis suscipit unde repellendus quisquam eligendi.</p>
+    </div>
+    <div id="delivery" class="content">
+      <h3>delevery</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, suscipit! Cumque velit quia sapiente quas ullam culpa aperiam quod at eveniet, soluta aliquam ipsum omnis suscipit unde repellendus quisquam eligendi.</p>
+    </div>
+    <div id="return" class="content">
+      <h3>return</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, suscipit! Cumque velit quia sapiente quas ullam culpa aperiam quod at eveniet, soluta aliquam ipsum omnis suscipit unde repellendus quisquam eligendi.</p>
+    </div>
+  </div>
+  <button class="snackbar-trigger">Click me</button>
+  </div>
+  <script src="assets/bundle.js"></script>
+</body>
+</html>

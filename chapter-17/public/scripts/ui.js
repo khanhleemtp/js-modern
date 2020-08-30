@@ -24,6 +24,7 @@ class ChatUI {
         </li>
         `
         this.list.innerHTML += html;
+        list.lastElementChild.scrollIntoView();
     }
 
 }
